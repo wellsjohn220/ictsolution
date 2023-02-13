@@ -202,3 +202,6 @@ footer .glyphicon {
   .glyphicon-user:before {    
     color: blue;
 }
+#myfoot {
+  background: linear-gradient(to bottom, #877a45 0%, #ffff00 100%);
+}
