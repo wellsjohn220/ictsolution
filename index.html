@@ -48,19 +48,19 @@
 </nav>
 
 <div class="jumbotron text-center">
+  <br />
   <h1>Develop ICT Solution</h1> 
-  <p style="color: lime;">This site powered by 12345 John in 2022</p> 
+  <p id="msg" style="color: lime;">This site powered by 12345 John in T42023</p> 
   <div class="form-group row">
     <div class="col-xs-3"> 
     </div>
     <div class="col-xs-6">
-        <form>
+        <form name="submit-to-google-sheet">
             <div class="input-group">
-              <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+              <input type="email" name="Email" class="form-control" size="50" placeholder="Email Address" required>
               <div class="input-group-btn">
-                <!-- <a href="subscrib.html" target="blank"><button type="button" class="btn btn-danger">Subscribe</button></a>  -->
-                <a href="mailto:wellsjohn220@gmail.com?subject=subscribe ictsolution&body=Please input yuor request here!">
-                  <button type="button" class="btn btn-danger">Subscribe</button></a>
+                <button type="submit" class="btn btn-danger"> 
+                <span class="glyphicon glyphicon-envelope"></span>&nbsp;Subscribe</button>
               </div>
             </div>
         </form>
@@ -428,7 +428,7 @@
       </div>
       <div class="item">
         <center>
-        <img src="https://www.projecttimes.com/wp-content/themes/yootheme/cache/6612da61425d98755836902a8bde1bce-a9b2d167.jpeg" 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRicWTZ61hqhRSQ4_lP2lBuCwBJVkJAjvte7QphTmlvrIEKCCGebRUaBLi-sIeCwWmYf8s&usqp=CAU" 
         alt="Benefits" width="800" height="400">
         </center>
         <div class="carousel-caption" style="color:red">
@@ -463,7 +463,7 @@
           <h1>Protection</h1>
         </div>
         <div class="panel-body">
-          <img src="https://www.managedsolution.com/wp-content/uploads/2018/09/bigstock-Password-Input-On-Blurred-Back-236308780-1920x1282.jpg"
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRicWTZ61hqhRSQ4_lP2lBuCwBJVkJAjvte7QphTmlvrIEKCCGebRUaBLi-sIeCwWmYf8s&usqp=CAU"
           class="img-size img-thumbnail" alt="cute cat" class="img-thumbnail" />
         </div>
         <div class="panel-footer">
@@ -551,4 +551,22 @@
 </body>
 <!-- Load external JavaScript -->
 <script src="scripts.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzB5Mmoq9VUES46bWhvrQ1cBRGaLSeaqwidQsfen4Bop5Qm6EH17sLTQOzJmPOzJ5UQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+  
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+          msg.innerHTML = "<br />Thank you For Subscribing ICT Solution Site by 12345 John"
+          setTimeout(function(){
+              msg.innerHTML = "This site powered by 12345 John in T42023"
+          }, 5000)
+          form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </html>
