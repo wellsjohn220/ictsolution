@@ -33,6 +33,10 @@
     img#hideme {
       display: none;
     }
+    #load-screen {
+        display: grid;
+        justify-content: center;
+    }
   }
   @media screen and (max-width: 480px) {
     .logo {
