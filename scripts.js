@@ -32,3 +32,15 @@ $(document).ready(function(){
     });
   });
 })
+function generateDate(){
+  let today = new Date().toLocaleDateString('en-GB')
+  console.log('Date has been loaded ' + today);
+  document.getElementById("reg").value = today;  
+  return true;
+}
+function generateEDate(){
+  let today = new Date().toLocaleDateString('en-GB')
+  console.log('E Regeste Date: ' + today);
+  document.getElementById("Ereg").value = today;  
+  return true;
+}
