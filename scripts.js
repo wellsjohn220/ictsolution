@@ -40,7 +40,7 @@ function generateDate(){
 }
 function generateEDate(){
   let today = new Date().toLocaleDateString('en-GB')
-  console.log('E Regeste Date: ' + today);
+  console.log('Email Regeste Date: ' + today);
   document.getElementById("Ereg").value = today;  
   return true;
 }
