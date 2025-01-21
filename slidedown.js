@@ -6,7 +6,7 @@ $(document).ready(function(){
 });
 
 const xValues = ["China","Australia","Italy", "France", "Spain", "USA", "Argentina"];
-const yValues = [70, 60, 55, 49, 44, 24, 15];
+const yValues = [40, 33, 25, 20, 18, 15, 10];
 const barColors = ["yellow","red", "green","blue","orange","brown","grey"];
 
 new Chart("myChart", {
