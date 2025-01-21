@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="loading.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediastyle.css" />
+   <link rel="stylesheet" href="mediastyle.css" />
+  <link rel="stylesheet" href="slidedown.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -45,6 +47,7 @@
         <li><a href="#portfolio">PORTFOLIO</a></li>
         <li><a href="#pricing">PROTACTION</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#javascript">Learn Javascript</a></li>
       </ul>
     </div>
   </div>
@@ -565,7 +568,18 @@
     </div>    
   </div>
 </div>
+  <!-- Container (Javascript Section) -->
+<div id="javascript" class="container-fluid">
+  <div class="container-fluid text-center" style="background-color: white;">
+    <h2>Using JavaScript to Show Chart</h2>
+    <div id="flip">Click to slide the panel down or up</div>
+    <div id="panel">
+        <img src="images/KILLU.GIF" alt="for fun" />
+        <canvas id="myChart" style="width:80%;max-width:100%"></canvas>
+    </div>
+  </div>
   
+</div>
 <!-- Container (Data View Section) -->
 <div id="dataview" class="container-fluid">
   <iframe src="https://script.google.com/macros/s/AKfycbwY7oVBLjzus0CcGXpIcVYRlgNEUTRi3YIPlYdZaCYOT3zZ__U56rjfWCPhhqsM9eTqwQ/exec" style="width: 100%; height: 700px;"></iframe>
@@ -667,4 +681,7 @@
   })
 
 </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="slidedown.js"></script>
 </html>
