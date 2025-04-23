@@ -1,0 +1,18 @@
+#panel, #flip {
+  padding: 10px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  margin: 0 10px;
+  color: red;
+}
+
+#panel {
+  padding: 30px;
+  display: none;
+}
+#panel:hover{
+    color:green;
+    font-weight: bold;
+    font-size: xx-large;
+}
