@@ -2,3 +2,6 @@
 https://www.youtube.com/watch?v=p1QU3kLFPdg
 
 https://github.com/wellsjohn220/ictsolution
+
+// how to publish and link to customer domain name
+https://www.youtube.com/watch?v=p1QU3kLFPdg&t=14s
